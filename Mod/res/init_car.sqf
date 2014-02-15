@@ -1,7 +1,5 @@
 _car = _this select 0;
 _car = _car select 0; 
-hint format ["%1",_car];
-
 
 
 _action1 = _car addAction ["<t color='#00FFFF'>Aufsteigen[1|VR]</t>", "\pain_car\scripts\car.sqf",[_car,"seat1",TRUE],10,false,false,"","[player,_target,'seat1'] call isAvailable"];
