@@ -1,4 +1,9 @@
 _key = _this select 0;
+_player = _this select 1;
+
+_car = _player getVariable "pain_car";
+
+//hint format['%1 | %2',_car,_player];
 
 _keymap = ['47','18'] find str _key;
 
@@ -7,8 +12,6 @@ if(str _keymap != "-1")then{
 	_name = name player;
 	
 	{
-	    _searchCar = nearestObjects [player,["B_MRAP_01_F","B_MRAP_01_hmg_F","B_MRAP_01_gmg_F","GLT_Oshkosh_JLTV_HMG","GLT_Oshkosh_JLTV_GMG"], 4]; 
-		_car = _searchCar select 0; //car
 	    
 	  	_var = _car getVariable _x;
 	    _currentSeat = _x;
@@ -38,10 +41,12 @@ if(str _keymap != "-1")then{
 	{
 	    case '47' : {
 	        detach player;
+            player setvariable ["pain_car",nil,TRUE];
 	   		 [player, ""] call pain_playAnimationAll; 
 	         };
 	    case '18' : {
 	        detach player;
+            player setvariable ["pain_car",nil,TRUE];
 	   		 [player, "AcrgPknlMstpSnonWnonDnon_AmovPercMstpSnonWnonDnon_getOutLow"] call pain_playAnimationAll; 
 	         };
 	};    

@@ -1,4 +1,4 @@
-isAvailable = {
+pain_isAvailable = {
 
 	_player = _this select 0;
 	_car = _this select 1;
