@@ -4,7 +4,6 @@ class Mission
 	addOns[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"glt_units_cars",
 		"a3_map_stratis",
 		"A3_Soft_F_MRAP_01",
 		"a3_characters_f_beta"
@@ -14,13 +13,12 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
 		"A3_Soft_F_MRAP_01",
-		"glt_units_cars",
 		"a3_map_stratis"
 	};
 	randomSeed=9136596;
 	class Intel
 	{
-		briefingName="Test";
+		briefingName="MRAP TEST";
 		startWeather=0.29999998;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -38,34 +36,23 @@ class Mission
 	};
 	class Groups
 	{
-		items=4;
+		items=7;
 		class Item0
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
-					position[]={1830.9961,5.5,5723.5254};
-					azimut=6.1230774;
+					position[]={1829.5894,5.5,5728.5889};
+					azimut=6.1230798;
 					id=0;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAYER COMMANDER";
+					vehicle="B_officer_F";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					init="this addAction [""Rescue POWs"",""rescuePows.sqf"",[POWS],1,false,true,"""",""(_target distance _this) < 3""];";
-				};
-				class Item1
-				{
-					position[]={1824.4806,5.5,5723.5913};
-					id=1;
-					side="WEST";
-					vehicle="B_MRAP_01_F";
-					skill=0.60000002;
-					text="s1";
-					init="0 = [this] execVM ""init_car.sqf"" ;";
 				};
 			};
 		};
@@ -77,15 +64,14 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1833.0326,5.5,5723.5742};
-					azimut=0.20271599;
-					id=2;
+					position[]={1826.7119,5.5,5725.8486};
+					azimut=6.1230798;
+					id=1;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
+					vehicle="B_officer_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="s2";
 				};
 			};
 		};
@@ -97,11 +83,11 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1830.9131,5.5,5721.6079};
-					azimut=0.20271599;
-					id=3;
+					position[]={1829.8177,5.5,5726.0313};
+					azimut=6.1230798;
+					id=2;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
+					vehicle="B_officer_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -116,29 +102,68 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={1832.8398,5.5,5721.7622};
-					azimut=0.20271599;
-					id=4;
+					position[]={1826.575,5.5,5728.6802};
+					azimut=6.1230798;
+					id=3;
 					side="WEST";
-					vehicle="B_soldier_AT_F";
-					player="PLAY CDG";
+					vehicle="B_officer_F";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 				};
 			};
 		};
-	};
-	class Vehicles
-	{
-		items=1;
-		class Item0
+		class Item4
 		{
-			position[]={1809.8351,5.5,5723.5659};
-			id=5;
-			side="EMPTY";
-			vehicle="GLT_Oshkosh_JLTV";
-			skill=0.60000002;
-			init="0 = [this] execVM ""init_car.sqf"" ;";
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1817.5405,5.5,5740.3804};
+					id=4;
+					side="WEST";
+					vehicle="B_MRAP_01_F";
+					leader=1;
+					skill=0.60000002;
+					text="s1";
+				};
+			};
+		};
+		class Item5
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1825.0313,5.5,5739.3438};
+					id=5;
+					side="WEST";
+					vehicle="B_MRAP_01_gmg_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={1834.105,5.5,5738.9785};
+					id=6;
+					side="WEST";
+					vehicle="B_MRAP_01_hmg_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
 		};
 	};
 };
